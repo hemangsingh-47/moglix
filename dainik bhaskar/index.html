@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>दैनिक भास्कर - मुखपृष्ठ</title>
+  <style>
+    /* Common CSS for all pages */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      color: #222;
+      background-color: #fafafa;
+    }
+
+    a {
+      color: #ff751a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: #ff751a;
+      color: white;
+      padding: 10px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.9em;
+    }
+
+    .news-ticker {
+      background: #222;
+      color: white;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      padding: 8px 0;
+      font-weight: 700;
+      font-size: 1em;
+      position: relative;
+    }
+
+    .news-ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: ticker 20s linear infinite;
+    }
+
+    @keyframes ticker {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    nav {
+      background-color: #333;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      justify-content: center;
+    }
+
+    nav ul li {
+      padding: 12px 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-weight: 700;
+      font-size: 1em;
+      display: block;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      background-color: #ff751a;
+      border-radius: 3px;
+    }
+
+    .hero {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .hero img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 7px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    }
+
+    .hero h2 {
+      margin: 15px 0 0;
+      font-size: 1.6em;
+      font-weight: 700;
+    }
+
+    main.content {
+      max-width: 1100px;
+      margin: 25px auto;
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 25px;
+      padding: 0 15px 40px;
+    }
+
+    section.news-section {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 7px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.05);
+    }
+
+    .news-card {
+      display: flex;
+      padding: 8px 0;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .news-card:last-child {
+      border-bottom: none;
+    }
+
+    .news-card img {
+      width: 140px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-right: 15px;
+      flex-shrink: 0;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+    }
+
+    .news-card a {
+      font-size: 1.05em;
+      font-weight: 600;
+      color: #222;
+    }
+
+    aside {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 7px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.05);
+    }
+
+    aside h3 {
+      margin-top: 0;
+      font-weight: 700;
+      border-bottom: 2px solid #ff751a;
+      padding-bottom: 5px;
+    }
+
+    aside ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 12px;
+    }
+
+    aside ul li {
+      font-size: 1.03em;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 18px 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+      box-shadow: 0 -3px 5px rgb(0 0 0 / 0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      main.content {
+        grid-template-columns: 1fr;
+      }
+      nav ul {
+        justify-content: flex-start;
+        overflow-x: auto;
+      }
+      nav ul li {
+        padding: 10px 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.4em;
+      }
+      .hero h2 {
+        font-size: 1.3em;
+      }
+      .news-card img {
+        width: 110px;
+        height: 65px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>दैनिक भास्कर</h1>
+    <div aria-label="Breaking news highlights" style="font-weight:700;">Breaking News</div>
+  </header>
+
+  <div class="news-ticker" aria-label="Live news ticker">
+    <span>
+      चुनाव परिणाम घोषित हैं... &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      विदेश नीति में नया बदलाव... &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      अर्थव्यवस्था में सुधार के संकेत... &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      क्रिकेट मैच का रोमांचक परिणाम... &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      मुंबई में भारी बारिश की संभावना...
+    </span>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">मुखपृष्ठ</a></li>
+      <li><a href="category.html">देश</a></li>
+      <li><a href="category.html">राज्य</a></li>
+      <li><a href="category.html">व्यापार</a></li>
+      <li><a href="category.html">खेल</a></li>
+      <li><a href="category.html">मनोरंजन</a></li>
+      <li><a href="category.html">टेक्नोलॉजी</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" aria-label="Top headline news">
+    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=800&q=75" alt="चुनाव परिणाम घोषित - मुख्य समाचार" />
+    <h2>चुनाव परिणाम घोषित: संसद में हुआ बड़ा बदलाव</h2>
+  </section>
+
+  <main class="content">
+    <section class="news-section" aria-label="Latest news">
+      <div class="news-card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=140&q=80" alt="अर्थव्यवस्था समाचार" />
+        <a href="news-article.html">अर्थव्यवस्था में तेजी, GDP में सुधार के संकेत</a>
+      </div>
+      <div class="news-card">
+        <img src="https://images.unsplash.com/photo-1515165562835-c6db8a422b47?auto=format&fit=crop&w=140&q=80" alt="मनोरंजन समाचार" />
+        <a href="news-article.html">फिल्म इंडस्ट्री में नई रिलीज़ का जलवा</a>
+      </div>
+      <div class="news-card">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=140&q=80" alt="खेल समाचार" />
+        <a href="news-article.html">क्रिकेट टीम ने जीता मैच, दर्शकों ने मनाया जश्न</a>
+      </div>
+    </section>
+
+    <aside aria-label="Trending news">
+      <h3>ट्रेंडिंग खबरें</h3>
+      <ul>
+        <li><a href="news-article.html">मौसम विभाग ने जारी की चेतावनी</a></li>
+        <li><a href="news-article.html">शेयर बाजार में भारी उतार-चढ़ाव</a></li>
+        <li><a href="news-article.html">नई शिक्षा नीति पर चर्चा</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    © 2025 Dainik Bhaskar Clone | Developed for learning purposes
+  </footer>
+
+</body>
+</html>

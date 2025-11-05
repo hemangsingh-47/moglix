@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>देश के समाचार - दैनिक भास्कर</title>
+  <style>
+    /* Reuse the same styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      color: #222;
+      background-color: #fafafa;
+    }
+
+    a {
+      color: #ff751a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: #ff751a;
+      color: white;
+      padding: 10px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.9em;
+    }
+
+    nav {
+      background-color: #333;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      justify-content: center;
+    }
+
+    nav ul li {
+      padding: 12px 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-weight: 700;
+      font-size: 1em;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: #ff751a;
+      border-radius: 3px;
+    }
+
+    main.category-container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px 25px;
+      border-radius: 7px;
+      box-shadow: 0 0 15px rgb(0 0 0 / 0.1);
+    }
+
+    main.category-container h2 {
+      font-size: 1.7em;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .category-news-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .category-news-card {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 12px;
+    }
+
+    .category-news-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+    }
+
+    .category-news-card a {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #222;
+    }
+
+    @media (max-width: 700px) {
+      main.category-container {
+        max-width: 95vw;
+      }
+      .category-news-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 18px 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+      box-shadow: 0 -3px 5px rgb(0 0 0 / 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>दैनिक भास्कर</h1>
+    <div aria-label="Breaking news highlights" style="font-weight:700;">Breaking News</div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">मुखपृष्ठ</a></li>
+      <li><a href="category.html" class="active">देश</a></li>
+      <li><a href="category.html">राज्य</a></li>
+      <li><a href="category.html">व्यापार</a></li>
+      <li><a href="category.html">खेल</a></li>
+      <li><a href="category.html">मनोरंजन</a></li>
+      <li><a href="category.html">टेक्नोलॉजी</a></li>
+    </ul>
+  </nav>
+
+  <main class="category-container">
+    <h2>देश के समाचार</h2>
+    <div class="category-news-list">
+      <article class="category-news-card">
+        <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=75" alt="लोकसभा" />
+        <a href="news-article.html">लोकसभा चुनाव के नतीजे घोषित, राजनीतिक हलचल तेज</a>
+      </article>
+
+      <article class="category-news-card">
+        <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=600&q=75" alt="सड़क निर्माण" />
+        <a href="news-article.html">सरकार ने सड़क निर्माण तेजी से शुरू किया</a>
+      </article>
+
+      <article class="category-news-card">
+        <img src="https://images.unsplash.com/photo-1464234941868-cd73d9a5bfa3?auto=format&fit=crop&w=600&q=75" alt="कृषि नीति" />
+        <a href="news-article.html">नई कृषि नीति से किसानों को बड़ा फायदा मिलने का अनुमान</a>
+      </article>
+
+      <article class="category-news-card">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=75" alt="खेल टूर्नामेंट" />
+        <a href="news-article.html">राष्ट्रीय खेल टूर्नामेंट में बढ़ती प्रतिस्पर्धा</a>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Dainik Bhaskar Clone | Developed for learning purposes
+  </footer>
+
+</body>
+</html>
