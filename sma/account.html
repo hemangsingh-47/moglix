@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My account - Login/Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #fff;
+      min-height: 100vh;
+    }
+    .header-bg {
+      background: #ffa600;
+      padding: 28px 0 24px 0;
+      text-align: center;
+      background-image: repeating-linear-gradient( #ffa600, #ffa600 20px, #ffb733 20px, #ffb733 40px);
+    }
+    .header-bg h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin: 0;
+      color: #231f20;
+      letter-spacing: 0.01em;
+    }
+    .header-bg p {
+      font-size: 1.1rem;
+      color: #231f20;
+      margin: 6px 0 0 0;
+      font-weight: 500;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .container h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      color: #231f20;
+      letter-spacing: 0.01em;
+    }
+    .container h3 {
+      font-size: 1.35rem;
+      margin: 0 0 22px 0;
+      color: #231f20;
+      font-weight: 700;
+    }
+    .form-box {
+      width: 430px;
+      margin: 0 auto 24px auto;
+      padding: 35px 40px 28px 40px;
+      border: 2px dashed #dbdbdb;
+      border-radius: 6px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    .form-box label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 335px;
+      font-size: 1rem;
+      margin: 0 0 10px 0;
+      font-weight: 500;
+      color: #231f20;
+    }
+    .form-box label .lost-link {
+      font-size: 0.98rem;
+      color: #231f20;
+      opacity: 0.59;
+      text-decoration: underline;
+      margin-left: auto;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    .form-box input[type="text"],
+    .form-box input[type="email"],
+    .form-box input[type="password"] {
+      width: 325px;
+      height: 40px;
+      padding: 0 12px;
+      border-radius: 3px;
+      border: 1px solid #dbdbdb;
+      font-size: 1em;
+      margin-bottom: 16px;
+      margin-top: 6px;
+      box-sizing: border-box;
+    }
+    .form-row {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .form-row label {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #231f20;
+      width: 100%;
+    }
+    .remember-label {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    .remember-label input[type="checkbox"] {
+      margin: 0 8px 0 0;
+      accent-color: #ffa600;
+    }
+    .sign-in-btn {
+      width: 100%;
+      background: #ffa600;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      letter-spacing: 0.07em;
+      font-weight: bold;
+      padding: 16px 0;
+      border-radius: 3px;
+      margin-top: 22px;
+      cursor: pointer;
+      box-shadow: 0 2px 0 rgba(255,166,0,0.16);
+      transition: background 0.18s;
+    }
+    .sign-in-btn:hover {
+      background: #ffb733;
+    }
+    .form-box input[type="submit"] {
+      margin: 0;
+    }
+    .not-member {
+      font-size: 1.1rem;
+      margin-top: 20px;
+    }
+    .not-member a {
+      color: #231f20;
+      text-decoration: underline;
+      font-weight: 500;
+      margin-left: 2px;
+    }
+    /* Responsive */
+    @media (max-width: 580px) {
+      .form-box {
+        width: 97vw;
+        min-width: 0;
+        padding: 18px 8px 14px 8px;
+      }
+      .form-box label, .form-box input[type="text"], .form-box input[type="email"], .form-box input[type="password"] {
+        width: 95%;
+        min-width: 0;
+      }
+      .nav-item:hover{
+  color: blue;
+    transform: translateY(-2px);
+    transition: all .2s ease-out;
+}
+
+.nav-item {
+  padding: 18px 16px 12px 16px;
+  color: #222;
+  text-decoration: none;
+  transition: color 0.18s;
+  border-bottom: 3px solid transparent;
+  transform: scaleX();
+}
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header-bg">
+    <h1>My account</h1>
+    <a class="""./index.html"><p>Home</p></a>
+  </div>
+  <div class="container">
+    <h2>Login/Register</h2>
+    <h3>Great to have you back!</h3>
+    <form class="form-box">
+      <div class="form-row" style="justify-content: space-between;">
+        <label for="username" style="flex:1;">
+          Username or email <span style="color:#e04300">*</span>
+        </label>
+        <label class="remember-label" for="remember" style="flex:auto; width:auto; margin-left:20px;">
+          <input type="checkbox" id="remember" name="remember">Remember
+        </label>
+      </div>
+      <input type="text" id="username" name="username" required>
+
+      <div class="form-row" style="justify-content: space-between;">
+        <label for="password" style="flex:1;">
+          Password <span style="color:#e04300">*</span>
+        </label>
+        <span class="lost-link">Lost?</span>
+      </div>
+      <input type="password" id="password" name="password" required>
+      <input class="sign-in-btn" type="submit" value="SIGN IN TO YOUR ACCOUNT">
+    </form>
+    <div class="not-member">
+      Not a member? <a href="#">Create an account</a>
+    </div>
+  </div>
+</body>
+</html>
