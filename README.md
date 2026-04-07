@@ -1,8 +1,8 @@
-# 🌐 Clone Website Assignment Collection
+# 🌐 Frontend Clone Showcase
 
-A collection of **frontend website clone assignments** built to practice and improve **HTML**, **CSS**, layout structuring, responsiveness, and UI recreation skills.
+A collection of **frontend website clone projects** built to practice and improve **HTML**, **CSS**, responsive layouts, and real-world UI recreation skills.
 
-This repository contains multiple **real-world website clones**, recreated to sharpen frontend development fundamentals and visual accuracy.
+This repository contains multiple website clones inspired by popular brands and platforms, recreated to strengthen frontend development fundamentals and design accuracy.
 
 ---
 
@@ -15,40 +15,49 @@ This repository contains multiple **real-world website clones**, recreated to sh
 ## 📌 Included Website Clones
 
 ### 1. 🛒 Moglix Clone
-A clone of the **Moglix** industrial e-commerce style website.
+A clone of the **Moglix** industrial e-commerce website.
 
 🔗 **Live Demo:** [View Moglix Clone](https://moglix-by-hemang.netlify.app/)
 
 ---
 
-### 2. 📰 Dainik Bhaskar Clone
-A clone inspired by the **Dainik Bhaskar** news website homepage and layout.
+### 2. 🔋 Eufy Clone
+A frontend recreation of the **Eufy** product landing page / website UI.
+
+🔗 **Live Demo:** [View Eufy Clone](https://eufyclone.netlify.app/)
 
 ---
 
-### 3. 🔋 Eufy Clone
-A frontend recreation of the **Eufy** website design.
+### 3. 🐶 The Farmer Dog Clone
+A clone inspired by **The Farmer’s Dog** website layout and landing page design.
+
+🔗 **Live Demo:** [View The Farmer Dog Clone](https://clonewebsite-one.vercel.app/Clone/Thefarmerdog/index.html)
 
 ---
 
-### 4. 🧱 Stacks Clone
+### 4. ⚡ Zepto Clone
+A clone of the **Zepto** quick-commerce website UI.
+
+🔗 **Live Demo:** [View Zepto Clone](https://clonewebsite-one.vercel.app/Clone/zepto-clone/index.html)
+
+---
+
+### 5. 🧱 Stacks Clone
 A UI clone based on a modern **Stacks-style** landing page / web interface.
 
----
-
-### 5. ⚡ Zepto Clone
-A clone of the **Zepto** quick-commerce website UI.
+🔗 **Live Demo:** [View Stacks Clone](https://clonewebsite-one.vercel.app/Clone/stacks-clone/index.html)
 
 ---
 
 ## ✨ Features
 
-- Multiple website clone projects in one repository
-- Clean HTML & CSS structure
-- Real-world UI recreation practice
-- Layout and styling implementation
-- Beginner-to-intermediate frontend assignments
-- Portfolio-friendly practice work
+- Multiple frontend clone projects in one repository
+- Real-world website UI recreation
+- Clean and structured HTML/CSS code
+- Responsive layout practice
+- Landing page and homepage design cloning
+- Beginner-to-intermediate frontend development work
+- Portfolio-friendly clone showcase
 
 ---
 
@@ -56,6 +65,7 @@ A clone of the **Zepto** quick-commerce website UI.
 
 - **HTML5**
 - **CSS3**
+- **JavaScript** *(if used in some clones)*
 
 ---
 
@@ -63,9 +73,9 @@ A clone of the **Zepto** quick-commerce website UI.
 
 ```bash
 clone_assignment/
-│── moglix/
-│── dainik bhaskar/
-│── eufy/
-│── stacks-clone/
+│── Moglix/
+│── Eufy/
+│── Thefarmerdog/
 │── zepto-clone/
+│── stacks-clone/
 │── README.md
